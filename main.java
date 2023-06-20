@@ -24,3 +24,23 @@ public static void contarVocalesConsonantes(String s) {
   }
   System.out.println("El string tiene " + vocales + " vocales y " + consonantes + " consonantes.");
 }
+public static void buscarLetra(String s, char letra) {
+  LinkedList<Integer> lista = new LinkedList<>();
+  s = s.toLowerCase();
+  letra = Character.toLowerCase(letra);
+  for (int i = 0; i < s.length(); i++) {
+    if (s.charAt(i) == letra) {
+      lista.add(i);
+    }
+  }
+  if (lista.isEmpty()) {
+    System.out.println("La letra " + letra + " no se encuentra en el string.");
+  } else {
+    int primera = lista.getFirst();
+    int ultima = lista.getLast();
+    System.out.println(lista);
+    System.out.println("La primera ocurrencia de la letra " + letra + " está en la posición " + primera + ".");
+    System.out.println("La última ocurrencia de la letra " + letra + " está en la posición " + ultima + ".");
+  }
+}
+
