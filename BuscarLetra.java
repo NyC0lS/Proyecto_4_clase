@@ -2,7 +2,7 @@
 import java.util.*;
 
 
-public class c {
+public class BuscarLetra {
 
     public static void buscarLetra(String s, char letra) {
         LinkedList<Integer> lista = new LinkedList<>();
